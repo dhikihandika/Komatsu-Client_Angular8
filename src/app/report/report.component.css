@@ -1,0 +1,43 @@
+.data-table{
+    margin: 20px;
+}
+
+.data-image{
+    margin: 20px;
+}
+
+h3{
+    font-family: sans-serif;
+}
+.flex-container {
+    display: flex;
+  }
+.flex-container > div {
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+  }
+
+.sub-data{
+    border-radius: 5px;
+    padding-left:20px;
+    margin-left:20px;
+    margin-right:20px;
+    background-color:  rgba(30, 103, 187, 0.8);
+    color:rgba(7, 7, 7, 0.726);
+}
+img{
+    border-radius: 8px;
+    -webkit-transition: width 2s, height 2s;
+    transition: width 2s, height 2s;
+}
+img:hover{
+    width: 1000px;
+    height: 650px;
+}
+
+
+/* On hover Style */
+.sub-data:hover{
+    background-color: white;
+}

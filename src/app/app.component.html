@@ -1,0 +1,73 @@
+<!-- 
+  Author: dhikihandika
+  Date C: 28/10/2019
+ -->
+
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- Boostarp CDN -->
+
+<mat-toolbar class="toolbar-container">
+    <mat-toolbar-row class="toolbar-item">
+      <button mat-icon-button>
+        <mat-icon class="icon-menu" (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <span class="icon-spacer"></span>
+      <img src="../assets/KI_Logo.png" alt="KI_Logo" width="100px" height="50px">
+      <h1>Komatsu Indonesia</h1>
+      <span class="menu-spacer"></span>
+      <div class="toolbar-list">
+        <a mat-button routerLink="/dashboard"> Dashboard </a>
+        <a mat-button routerLink="/report"> Report </a>
+        <a mat-button routerLink="/notification"> Notification </a>
+        <!-- <a mat-button routerLink="/loadimage"> loadimage </a> -->
+        <a mat-button routerLink="/aboutas"> About As </a>  
+      </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list class="sidanav-item">
+      <a mat-list-item (click)="sidenav.toggle()"><mat-icon class="icon-clear">clear</mat-icon></a>
+      <span class="sidenav-spacer"></span>
+      <a mat-button routerLink="/dashboard"> Dashboard </a>
+      <a mat-button routerLink="/report"> Report </a>
+      <a mat-button routerLink="/notification"> Notification </a>
+      <!-- <a mat-button routerLink="/loadimage"> Loadimage </a> -->
+      <a mat-button routerLink="/aboutas"> About As </a>  
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!-- Footer Element -->
+<footer class="page-footer font-small blue pt-4">
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+        <!-- Content -->
+        <h3 class="text-uppercase">Footer Content</h3>
+        <p>Here you can use rows and columns here to organize your footer content.</p>
+      </div>
+    </div>
+    <!-- Grid row -->
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">Copyright © 2019 
+    <a href=#company_link style="color:gold;"><em>Parametrik R&D.</em> </a>
+  </div>
+  <!-- Copyright -->
+</footer>
+

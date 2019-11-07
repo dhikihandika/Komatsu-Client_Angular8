@@ -1,0 +1,85 @@
+
+
+<h3>Table of Images</h3>
+<hr>
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <th scope="col">No</th>
+        <th scope="col">Operator</th>
+        <th scope="col">Model Type</th>
+        <th scope="col">Squence MOdel</th>
+        <th scope="col">Checkbox</th>
+        <th scope="col">Percent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of dataList; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ data.nama_op}}</td>
+        <td>{{ data.model_type}}</td>
+        <td>{{ data.model_urut}}</td>
+        <td>{{ data.result_checkbox}}</td>
+        <td>{{ data.result_presentase}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p *ngFor="let res of dataCheckbox">{{res}}</p>
+
+<h3>Display Image Here</h3>
+<hr>
+<!-- Image1 -->
+<mat-accordion>
+        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle 
+        (opened)="ExpansionImage1 = true"
+        (closed)="ExpansionImage1 = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Image 1
+            </mat-panel-title>
+            <hr>
+            <mat-panel-description>
+             condition: {{ExpansionImage1 ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="flex-container">
+              <div><img [src]="image1" alt="loading img" width="800" height="600"></div>
+              <div>
+                  <mat-list>
+                      <h4>Detail Checkbox:</h4>
+                      <mat-divider></mat-divider>
+                      <mat-list-item *ngFor="let cc1 of arraycheckbox1">{{cc1}}</mat-list-item>
+                  </mat-list>  
+            </div>
+          </div>
+        </mat-expansion-panel>
+
+         <mat-expansion-panel (opened)="ExpansionImage2 = true"
+                             (closed)="ExpansionImage2 = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Image 2
+            </mat-panel-title>
+            <hr>
+            <mat-panel-description>
+             condition: {{ExpansionImage2 ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div><img [src]="image2" alt="loading img"></div>
+        </mat-expansion-panel>
+
+         <mat-expansion-panel (opened)="ExpansionImage3 = true"
+                                   (closed)="ExpansionImage3 = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Image 3
+                  </mat-panel-title>
+                  <hr>
+                  <mat-panel-description>
+                   condition: {{ExpansionImage3 ? 'open' : 'closed'}}
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+            <div><img [src]="image3" alt="loading img"></div>
+        </mat-expansion-panel>
+    </mat-accordion>

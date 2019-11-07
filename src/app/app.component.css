@@ -1,0 +1,86 @@
+/* Toolbar Style */
+mat-toolbar{
+    height: 80px;
+}
+.toolbar-container{
+    background-color: rgb(30, 103, 187);
+    color: white;
+    padding: 10px;
+}
+.icon-menu, h1 {
+    font-size: 25px;
+}
+.icon-spacer{
+    display: flex;
+    padding-right: 10px;
+}
+.menu-spacer{
+    display: flex;
+    padding-right: 100px;
+}
+.toolbar-list{
+    display: inline;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+.toolbar-list a{
+   font-size: 20px;
+}
+
+
+/* Sidenav Style */
+.sidanav-item{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.icon-clear{
+    padding-left: 120px;
+}
+.sidanav-item a{
+    text-align: left;
+    font-size: 15px;
+}
+.sidenav-spacer{
+    display: flex;
+    padding-left: 30px;
+}
+
+/* Footer Style */
+footer {
+    background-color: rgb(30, 103, 187);
+    color: white;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.footer-copyright{
+    text-align: center;
+}
+.row{
+    margin: 0px;
+}
+
+
+
+/* Responsive design on ipad */
+@media only screen and (min-width:375px) and (max-width:770px) {
+    .icon-menu, h1 {
+        font-size: 20px;
+    }
+    .toolbar-list a{
+        font-size: 15px;
+     }
+    .menu-spacer{
+        display: flex;
+        padding-right: 20px;
+    }
+  }
+
+/* Responsive design on mobile phone */
+@media only screen and (max-width:375px){
+    .toolbar-list a{
+        display: none;
+     }
+  }

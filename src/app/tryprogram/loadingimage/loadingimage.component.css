@@ -1,0 +1,18 @@
+.images{
+    margin: 80px;
+    text-align: center;
+}
+
+h2{
+    margin: 30px;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+  }
+.flex-container > div {
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+  }

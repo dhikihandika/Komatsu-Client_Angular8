@@ -1,0 +1,246 @@
+<!-- /*
+Aothuor : dhkihandika
+Date    : 05/11/2019
+*/ -->
+
+<div class="sub-data">
+    <hr>
+    <h3>Table of Data</h3>
+    <hr>
+</div>
+<div class="data-table">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+          <th scope="col">No</th>
+          <th scope="col">Operator</th>
+          <th scope="col">Model Type</th>
+          <th scope="col">Squence MOdel</th>
+          <th scope="col">Checkbox</th>
+          <th scope="col">Percent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of dataList; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ data.nama_op}}</td>
+          <td>{{ data.model_type}}</td>
+          <td>{{ data.model_urut}}</td>
+          <td>{{ data.result_checkbox}}</td>
+          <td>{{ data.result_presentase}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="sub-data">
+    <hr>
+    <h3>Display Image</h3>
+    <hr>
+</div>
+<div class="data-image">
+  <mat-accordion>
+          <!-- Display Image 1 -->
+          <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle 
+          (opened)="ExpansionImage1 = true"
+          (closed)="ExpansionImage1 = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>Display Image at rows 1</mat-panel-title>
+              <mat-panel-description>
+               condition: {{ExpansionImage1 ? 'open' : 'closed'}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div class="flex-container">
+                <div class="imgsty"><img [src]="image1" alt="loading img" width="800" height="500"></div>
+                <div>
+                    <mat-list>
+                        <h4>Detail Checkbox:</h4>
+                        <mat-divider></mat-divider>
+                        <mat-list-item *ngFor="let ck3 of arraycheckbox1">{{ck3}}</mat-list-item>
+                    </mat-list>  
+              </div>
+            </div>
+          </mat-expansion-panel>
+  
+          <!-- Display Image 2 -->
+          <mat-expansion-panel (opened)="ExpansionImage2 = true" (closed)="ExpansionImage2 = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>Display Image at rows 2</mat-panel-title>
+              <mat-panel-description>
+               condition: {{ExpansionImage2 ? 'open' : 'closed'}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div class="flex-container">
+              <div class="imgsty"><img [src]="image2" alt="loading img" width="800" height="500"></div>
+              <div>
+                  <mat-list>
+                      <h4>Detail Checkbox:</h4>
+                      <mat-divider></mat-divider>
+                      <mat-list-item *ngFor="let ck2 of arraycheckbox2">{{ck2}}</mat-list-item>
+                  </mat-list>  
+            </div>
+          </div>
+          </mat-expansion-panel>
+  
+          <!-- Display Image 3 -->
+          <mat-expansion-panel (opened)="ExpansionImage3 = true" (closed)="ExpansionImage3 = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>Display Image at rows 3</mat-panel-title>
+                    <mat-panel-description>
+                     condition: {{ExpansionImage3 ? 'open' : 'closed'}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <div class="flex-container">
+                    <div class="imgsty"><img [src]="image3" alt="loading img"  width="800" height="500"></div>
+                    <div>
+                        <mat-list>
+                            <h4>Detail Checkbox:</h4>
+                            <mat-divider></mat-divider>
+                            <mat-list-item *ngFor="let ck3 of arraycheckbox3">{{ck3}}</mat-list-item>
+                        </mat-list>  
+                  </div>
+                </div>
+          </mat-expansion-panel>
+  
+          <!-- Display Image 4 -->
+          <mat-expansion-panel (opened)="ExpansionImage4 = true" (closed)="ExpansionImage4 = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>Display Image at rows 4</mat-panel-title>
+                    <mat-panel-description>
+                     condition: {{ExpansionImage4 ? 'open' : 'closed'}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <div class="flex-container">
+                    <div class="imgsty"><img [src]="image4" alt="loading img" width="800" height="500"></div>
+                    <div>
+                        <mat-list>
+                            <h4>Detail Checkbox:</h4>
+                            <mat-divider></mat-divider>
+                            <mat-list-item *ngFor="let ck4 of arraycheckbox4">{{ck4}}</mat-list-item>
+                        </mat-list>  
+                  </div>
+                </div>
+          </mat-expansion-panel>
+  
+          <!-- Display Image 5 -->
+          <mat-expansion-panel (opened)="ExpansionImage5 = true" (closed)="ExpansionImage5 = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>Display Image at rows 5</mat-panel-title>
+                    <mat-panel-description>
+                     condition: {{ExpansionImage5 ? 'open' : 'closed'}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <div class="flex-container">
+                    <div class="imgsty"><img [src]="image5" alt="loading img"  width="800" height="500"></div>
+                    <div>
+                        <mat-list>
+                            <h4>Detail Checkbox:</h4>
+                            <mat-divider></mat-divider>
+                            <mat-list-item *ngFor="let ck5 of arraycheckbox5">{{ck5}}</mat-list-item>
+                        </mat-list>  
+                  </div>
+                </div>
+          </mat-expansion-panel>
+  
+          <!-- Display Image 6 -->
+          <mat-expansion-panel (opened)="ExpansionImage6 = true" (closed)="ExpansionImage6 = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>Display Image at rows 6</mat-panel-title>
+                    <mat-panel-description>
+                     condition: {{ExpansionImage6 ? 'open' : 'closed'}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <div class="flex-container">
+                    <div class="imgsty"><img [src]="image6" alt="loading img"  width="800" height="500"></div>
+                    <div>
+                        <mat-list>
+                            <h4>Detail Checkbox:</h4>
+                            <mat-divider></mat-divider>
+                            <mat-list-item *ngFor="let ck6 of arraycheckbox6">{{ck6}}</mat-list-item>
+                        </mat-list>  
+                  </div>
+                </div>
+          </mat-expansion-panel>
+  
+          <!-- Display Image 7 -->
+          <mat-expansion-panel (opened)="ExpansionImage7 = true" (closed)="ExpansionImage7 = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>Display Image at rows 7</mat-panel-title>
+                    <mat-panel-description>
+                     condition: {{ExpansionImage7 ? 'open' : 'closed'}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <div class="flex-container">
+                    <div class="imgsty"><img [src]="image7" alt="loading img"  width="800" height="500"></div>
+                    <div>
+                        <mat-list>
+                            <h4>Detail Checkbox:</h4>
+                            <mat-divider></mat-divider>
+                            <mat-list-item *ngFor="let ck7 of arraycheckbox7">{{ck7}}</mat-list-item>
+                        </mat-list>  
+                  </div>
+                </div>
+          </mat-expansion-panel>
+  
+          <!-- Display Image 8 -->
+          <mat-expansion-panel (opened)="ExpansionImage8 = true" (closed)="ExpansionImage8 = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>Display Image at rows 8</mat-panel-title>
+                    <mat-panel-description>
+                     condition: {{ExpansionImage8 ? 'open' : 'closed'}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <div class="flex-container">
+                    <div class="imgsty"><img [src]="image8" alt="loading img"  width="800" height="500"></div>
+                    <div>
+                        <mat-list>
+                            <h4>Detail Checkbox:</h4>
+                            <mat-divider></mat-divider>
+                            <mat-list-item *ngFor="let ck8 of arraycheckbox8">{{ck8}}</mat-list-item>
+                        </mat-list>  
+                  </div>
+                </div>
+          </mat-expansion-panel>
+  
+          <!-- Display Image 9 -->
+          <mat-expansion-panel (opened)="ExpansionImage9 = true" (closed)="ExpansionImage9 = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>Display Image at rows 9</mat-panel-title>
+                    <mat-panel-description>
+                     condition: {{ExpansionImage9 ? 'open' : 'closed'}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <div class="flex-container">
+                    <div class="imgsty"><img [src]="image9" alt="loading img"  width="800" height="500"></div>
+                    <div>
+                        <mat-list>
+                            <h4>Detail Checkbox:</h4>
+                            <mat-divider></mat-divider>
+                            <mat-list-item *ngFor="let ck9 of arraycheckbox9">{{ck9}}</mat-list-item>
+                        </mat-list>  
+                  </div>
+                </div>
+          </mat-expansion-panel>
+  
+          <!-- Display Image 10 -->
+          <mat-expansion-panel (opened)="ExpansionImage10 = true" (closed)="ExpansionImage10 = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>Display Image at rows 10</mat-panel-title>
+                    <mat-panel-description>
+                     condition: {{ExpansionImage10 ? 'open' : 'closed'}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <div class="flex-container">
+                    <div class="imgsty"><img [src]="image10" alt="loading img"  width="800" height="500"></div>
+                    <div>
+                        <mat-list>
+                            <h4>Detail Checkbox:</h4>
+                            <mat-divider></mat-divider>
+                            <mat-list-item *ngFor="let ck10 of arraycheckbox10">{{ck10}}</mat-list-item>
+                        </mat-list>  
+                  </div>
+                </div>
+          </mat-expansion-panel>
+  
+      </mat-accordion>
+</div>

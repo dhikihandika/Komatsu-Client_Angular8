@@ -1,0 +1,44 @@
+<!-- 
+Author :  dhikihandika
+Date   :  05-11-2019
+ -->
+
+<!-- Checkbox and Presentase Line Chart -->
+<div class="sub-dash">
+    <mat-accordion>
+          <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle 
+          (opened)="panelLineOpenState = true"
+          (closed)="panelLineOpenState = false">
+              <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <h3>Line Chart Data</h3>
+                  </mat-panel-title>
+                  <mat-panel-description>
+                      condition: {{panelLineOpenState ? 'open' : 'closed'}}
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+            <p>LineChart Checkbox and Presentase</p>
+            <app-linechart></app-linechart>
+          </mat-expansion-panel>
+      </mat-accordion>
+</div>
+
+<!-- Checkbox and Presentase Bar Chart -->
+<div class="sub-dash">
+<mat-accordion>
+    <br>
+    <mat-expansion-panel (opened)="panelBarOpenState = true"
+                           (closed)="panelBarOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>Bar Chart Data</h3>
+          </mat-panel-title>
+          <mat-panel-description>
+              condition: {{panelBarOpenState ? 'open' : 'closed'}}
+             </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>BarChart Checkbox and Presentase</p>
+        <app-barchart></app-barchart>
+      </mat-expansion-panel>
+  </mat-accordion>
+</div>
