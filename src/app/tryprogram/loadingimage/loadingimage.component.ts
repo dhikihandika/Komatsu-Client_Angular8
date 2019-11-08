@@ -110,7 +110,7 @@ export class LoadingimageComponent implements OnInit {
   image2;
   image3;
   GetImageData() {
-    this.http.get<any>("http://localhost:8080/get/resultdataimage")
+    this.http.get<any>("http://monitor.parametrik.co.id:8080/get/resultdataimage")
     .subscribe((data => { 
       var STRING_CHAR1 = btoa(new Uint8Array(data[0].result_image.data).reduce(function (data, byte1) {
         return data + String.fromCharCode(byte1)

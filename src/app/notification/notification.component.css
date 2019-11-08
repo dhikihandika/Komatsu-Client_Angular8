@@ -1,0 +1,15 @@
+/* Footer Style */
+footer {
+    background-color: rgb(30, 103, 187);
+    color: white;
+    font-size: 18px;
+    padding: 0;
+    margin-top: 50px;
+    text-align: left;
+}
+.footer-copyright{
+    text-align: center;
+}
+.row{
+    margin: 0px;
+}

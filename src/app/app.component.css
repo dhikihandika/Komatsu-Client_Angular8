@@ -1,11 +1,15 @@
 /* Toolbar Style */
 mat-toolbar{
-    height: 80px;
+    height: 70px;
 }
 .toolbar-container{
     background-color: rgb(30, 103, 187);
     color: white;
-    padding: 10px;
+    padding: 5px;
+}
+.toolbar-spacer{
+    display: inline;
+    padding-right: 640px;
 }
 .icon-menu, h1 {
     font-size: 25px;
@@ -16,7 +20,7 @@ mat-toolbar{
 }
 .menu-spacer{
     display: flex;
-    padding-right: 100px;
+    padding-right: 50px;
 }
 .toolbar-list{
     display: inline;
@@ -46,21 +50,6 @@ mat-toolbar{
     padding-left: 30px;
 }
 
-/* Footer Style */
-footer {
-    background-color: rgb(30, 103, 187);
-    color: white;
-    font-size: 20px;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-}
-.footer-copyright{
-    text-align: center;
-}
-.row{
-    margin: 0px;
-}
 
 
 

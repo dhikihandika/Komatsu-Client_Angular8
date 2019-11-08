@@ -56,7 +56,7 @@ export class ReportComponent implements OnInit {
   // ==================================================================================================== //
   image1;image2;image3;image4;image5;image6;image7;image8;image9;image10;
   GetImageData() {
-    this.http.get<any>("http://localhost:8080/get/resultdataimage")
+    this.http.get<any>("http://monitor.parametrik.co.id:8080/get/resultdataimage")
     .subscribe((data => { 
       var STRING_CHAR1 = btoa(new Uint8Array(data[0].result_image.data).reduce(function (data, byte1) {
         return data + String.fromCharCode(byte1)

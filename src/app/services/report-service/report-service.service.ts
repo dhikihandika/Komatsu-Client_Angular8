@@ -15,7 +15,7 @@ import { Ireports } from './report';
 export class ReportServiceService {
 
   //Base URL
-  baseurl = 'http://localhost:8080';
+  baseurl = 'http://monitor.parametrik.co.id:8080';
   constructor(private http: HttpClient) { }
 
   //Http Headers

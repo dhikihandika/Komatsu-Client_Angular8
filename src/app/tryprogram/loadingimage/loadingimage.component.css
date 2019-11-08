@@ -16,3 +16,20 @@ h2{
     padding: 20px;
     font-size: 20px;
   }
+
+
+  /* Footer Style */
+footer {
+  background-color: rgb(30, 103, 187);
+  color: white;
+  font-size: 18px;
+  padding: 0;
+  margin-top: 20px;
+  text-align: left;
+}
+.footer-copyright{
+  text-align: center;
+}
+.row{
+  margin: 0px;
+}
