@@ -1,49 +1,66 @@
 <!-- 
   Author: dhikihandika
-  Date C: 28/10/2019
+  Date  : 28/10/2019
  -->
 
- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<!-- CSS and JavaScript Boostrap CDN (Code Delivery Network) -->
+<!-- If in project use boostrap material you must import this CDN -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />                                         
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<!-- Boostarp CDN -->
 
+
+<!-- material toolbar element -->
 <mat-toolbar class="toolbar-container">
+    <!-- material row tollbar element -->
     <mat-toolbar-row class="toolbar-item">
+
+      <!-- button element -->
       <button mat-icon-button>
+        <!-- materila icon elelment -->
         <mat-icon class="icon-menu" (click)="sidenav.toggle()">menu</mat-icon>
       </button>
+      <!-- span element use to make inline icon space-->
       <span class="icon-spacer"></span>
-      <a href="http://www.komi.co.id/"><img src="../assets/KomatsuLogo.png" alt="KI_Logo" width="350px" height="45px"></a>
-      <!-- <h1>Komatsu Indonesia</h1> -->
+      <!-- link elemet of logo-->
+      <a href="http://www.komi.co.id/"><img class="logo-icon" src="../assets/KomatsuLogo.png" alt="KI_Logo" width="350px" height="45px"></a>
       <span class="menu-spacer"></span>
+
+      <!-- blok of toolbar list -->
       <div class="toolbar-list">
+        <!-- tollbar list link element -->
         <a mat-button routerLink="/dashboard"> Dashboard </a>
         <a mat-button routerLink="/report"> Report </a>
         <!-- <a mat-button routerLink="/notification"> Notification </a> -->
-        <!-- <a mat-button routerLink="/loadimage"> loadimage </a> -->
         <a mat-button routerLink="/aboutas"> About </a>
-        <span class="toolbar-spacer"></span> 
-        <a mat-button href="/#"><img src="../assets/KI.png" alt="KI_Logo" width="300px" height="70px"></a>
-
       </div>
+      <!-- span element use to make inline toolbar space-->
+      <span class="toolbar-spacer"></span> 
+      <!-- link elemnet of logo-->
+      <a mat-button class="logo-toolbar" href="/#"><img src="../assets/KI.png" alt="KI_Logo" width="300px" height="70px"></a>
     </mat-toolbar-row>
 </mat-toolbar>
 
+
+<!-- material side navigation element -->
 <mat-sidenav-container>
   <mat-sidenav #sidenav>
+    <!-- material side navigation list element -->
     <mat-nav-list class="sidanav-item">
+      <!-- link element of navigation list  -->
       <a mat-list-item (click)="sidenav.toggle()"><mat-icon class="icon-clear">clear</mat-icon></a>
       <span class="sidenav-spacer"></span>
-      <a mat-button routerLink="/dashboard"> Dashboard </a>
-      <a mat-button routerLink="/report"> Report </a>
-      <!-- <a mat-button routerLink="/notification"> Notification </a> -->
-      <!-- <a mat-button routerLink="/loadimage"> Loadimage </a> -->
-      <a mat-button routerLink="/aboutas"> About </a>  
+      <a mat-button routerLink="/dashboard"><mat-icon class="icon-sidenav">dashboard</mat-icon>Dashboard </a>
+      <a mat-button routerLink="/report"><mat-icon class="icon-sidenav">view_list</mat-icon>Report </a>
+      <!-- <a mat-button routerLink="/notification"><mat-icon class="icon-sidenav"></mat-icon> Notification </a> -->
+      <a mat-button routerLink="/aboutas"><mat-icon class="icon-sidenav">account_circle</mat-icon>About </a>  
     </mat-nav-list>
   </mat-sidenav>
 
+  <!-- material side navigation content -->
   <mat-sidenav-content>
+    <!-- block element of content -->
     <div style="height: 88vh;">
+      <!-- acts as a placeholder that Angular dynamically fills based on the current router state. -->
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>

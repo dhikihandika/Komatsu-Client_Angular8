@@ -1,11 +1,15 @@
+/* 
+Author : dhkihandika
+Date    : 05/11/2019 
+*/
+
+/* Table and expansion image style */
 .data-table{
     margin: 20px;
 }
-
 .data-image{
     margin: 20px;
 }
-
 h3{
     font-family: sans-serif;
 }
@@ -17,7 +21,6 @@ h3{
     padding: 20px;
     font-size: 20px;
   }
-
 .sub-data{
     border-radius: 5px;
     padding-left:20px;
@@ -36,17 +39,15 @@ img:hover{
     height: 650px;
 }
 
-
 /* On hover Style */
 .sub-data:hover{
     background-color: white;
 }
 
-
 /* Footer Style */
 footer {
     background-color: rgb(30, 103, 187);
-    color: white;
+    color:white;
     font-size: 18px;
     padding: 0;
     margin-top: 20px;
@@ -58,3 +59,81 @@ footer {
 .row{
     margin: 0px;
 }
+
+/* Responsive design on ipad */
+@media only screen and (min-width:375px) and (max-width:1024px) {
+    img{
+        width: 300px;
+        height: 200px;
+        border-radius: 5px;
+        -webkit-transition: width 2s, height 2s;
+        transition: width 2s, height 2s;
+    }
+    img:hover{
+        width: 450px;
+        height: 300px;
+    }
+    mat-list h4{
+        font-size: 20px;
+    }
+    mat-list mat-list-item{
+        font-size: 18px;
+    }
+    .text-uppercase, .text-content{
+        text-align: left;
+        font-size: 20px;
+    }
+    .footer-copyright{
+        font-size: 15px;
+    }
+  }
+
+/* Responsive design on mobile phone */
+@media only screen and (max-width:375px){
+    mat-panel-title h3{
+        font-size: 10px;
+        margin: 5px;
+    }
+    mat-panel-description{
+        font-size: 10px;
+        margin: 5px;
+    }
+    .sub-data h3{
+        font-size: 20px;
+    }
+    .table{
+        font-size: 9px;
+    }
+    img{
+        width: 100px;
+        height: 70px;
+        padding: 0%;
+        border-radius: 5px;
+        -webkit-transition: width 2s, height 2s;
+        transition: width 2s, height 2s;
+    }
+    img:hover{
+        width:230px;
+        height: 150px;
+    }
+    mat-list{
+        display: inline-block;
+    }
+    mat-list h4{
+        font-size: 10px;
+    }
+    mat-list mat-list-item{
+        font-size: 9px;
+    }
+    .text-uppercase, .text-content{
+        text-align: left;
+        font-size: 15px;
+        padding:5px;
+        margin: 2px;
+    }
+    .footer-copyright{
+        font-size: 10px;
+        padding: 2px;
+        margin: 5px;
+    }
+  }

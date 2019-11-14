@@ -1,3 +1,8 @@
+/* 
+  Author: dhikihandika
+  Date  : 28/10/2019
+*/
+
 /* Toolbar Style */
 mat-toolbar{
     height: 70px;
@@ -8,8 +13,8 @@ mat-toolbar{
     padding: 5px;
 }
 .toolbar-spacer{
-    display: inline;
-    padding-right: 640px;
+    display: flex;
+    padding-right: 200px;
 }
 .icon-menu, h1 {
     font-size: 25px;
@@ -31,6 +36,12 @@ mat-toolbar{
    font-size: 20px;
 }
 
+/* On Hover */
+.toolbar-list a:hover{
+    background-color:  rgb(25, 80, 145);
+    color: white;
+ }
+
 
 /* Sidenav Style */
 .sidanav-item{
@@ -49,12 +60,15 @@ mat-toolbar{
     display: flex;
     padding-left: 30px;
 }
-
-
+/* On Hover */
+.sidanav-item a:hover{
+    background-color: rgb(25, 80, 145);
+    color: white;
+}
 
 
 /* Responsive design on ipad */
-@media only screen and (min-width:375px) and (max-width:770px) {
+@media only screen and (min-width:375px) and (max-width:1024px) {
     .icon-menu, h1 {
         font-size: 20px;
     }
@@ -65,6 +79,9 @@ mat-toolbar{
         display: flex;
         padding-right: 20px;
     }
+    .logo-toolbar{
+        display:none;
+    }
   }
 
 /* Responsive design on mobile phone */
@@ -72,4 +89,11 @@ mat-toolbar{
     .toolbar-list a{
         display: none;
      }
+     .logo-icon{
+         height: 40px;
+         width: 200px;
+     }
+     .logo-toolbar{
+        display:none;
+    }
   }

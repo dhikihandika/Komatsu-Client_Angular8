@@ -1,27 +1,39 @@
 <!-- /*
-Aothuor : dhkihandika
+Author : dhkihandika
 Date    : 05/11/2019
 */ -->
 
+<!-- block element of sub-data title -->
 <div class="sub-data">
     <hr>
     <h3>Table of Data</h3>
     <hr>
 </div>
+
+<!-- block element of data-table -->
 <div class="data-table">
+
+  <!-- table element -->
   <table class="table table-striped">
+    <!-- head table element -->
     <thead>
+      <!-- row element of table -->
       <tr>
+        <!-- header cell element table -->
           <th scope="col">No</th>
           <th scope="col">Operator</th>
           <th scope="col">Model Type</th>
-          <th scope="col">Squence MOdel</th>
+          <th scope="col">Squence Model</th>
           <th scope="col">Checkbox</th>
           <th scope="col">Percent</th>
       </tr>
     </thead>
+
+    <!-- body table elemnt -->
     <tbody>
+      <!-- row element of table with *ngiFor bind data from datalist -->
       <tr *ngFor="let data of dataList; index as i">
+          <!-- cell of table element with data bind -->
           <th scope="row">{{ i + 1 }}</th>
           <td>{{ data.nama_op}}</td>
           <td>{{ data.model_type}}</td>
@@ -33,34 +45,49 @@ Date    : 05/11/2019
   </table>
 </div>
 
+<!-- block element of sub-data title -->
 <div class="sub-data">
     <hr>
     <h3>Display Image</h3>
     <hr>
 </div>
+
+<!-- block element of data-image -->
 <div class="data-image">
   <mat-accordion>
           <!-- Display Image 1 -->
+          <!-- material expansion panel elment -->
           <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle 
           (opened)="ExpansionImage1 = true"
           (closed)="ExpansionImage1 = false">
+            <!-- material expasion panel header element -->
             <mat-expansion-panel-header>
+              <!-- material title element -->
               <mat-panel-title>Display Image at rows 1</mat-panel-title>
+              <!-- material panel-description element -->
               <mat-panel-description>
                condition: {{ExpansionImage1 ? 'open' : 'closed'}}
               </mat-panel-description>
             </mat-expansion-panel-header>
+            <!-- block of expansionn panel -->
             <div class="flex-container">
+                <!-- block of image data from database -->
                 <div class="imgsty"><img [src]="image1" alt="loading img" width="800" height="500"></div>
+                <!-- block of material list -->
                 <div>
                     <mat-list>
-                        <h4>Detail Checkbox:</h4>
+                        <h4>Detail Checkbox</h4>
+                        <!-- Add material devide -->
                         <mat-divider></mat-divider>
+                        <!-- Material list item element -->
                         <mat-list-item *ngFor="let ck3 of arraycheckbox1">{{ck3}}</mat-list-item>
                     </mat-list>  
               </div>
             </div>
           </mat-expansion-panel>
+          <!-- ----------------------------------------------- -->
+          <!-- Element expansion image 1 until 10 alwayse same -->
+          <!-- ----------------------------------------------- -->
   
           <!-- Display Image 2 -->
           <mat-expansion-panel (opened)="ExpansionImage2 = true" (closed)="ExpansionImage2 = false">
@@ -74,7 +101,7 @@ Date    : 05/11/2019
               <div class="imgsty"><img [src]="image2" alt="loading img" width="800" height="500"></div>
               <div>
                   <mat-list>
-                      <h4>Detail Checkbox:</h4>
+                      <h4>Detail Checkbox</h4>
                       <mat-divider></mat-divider>
                       <mat-list-item *ngFor="let ck2 of arraycheckbox2">{{ck2}}</mat-list-item>
                   </mat-list>  
@@ -94,7 +121,7 @@ Date    : 05/11/2019
                     <div class="imgsty"><img [src]="image3" alt="loading img"  width="800" height="500"></div>
                     <div>
                         <mat-list>
-                            <h4>Detail Checkbox:</h4>
+                            <h4>Detail Checkbox</h4>
                             <mat-divider></mat-divider>
                             <mat-list-item *ngFor="let ck3 of arraycheckbox3">{{ck3}}</mat-list-item>
                         </mat-list>  
@@ -114,7 +141,7 @@ Date    : 05/11/2019
                     <div class="imgsty"><img [src]="image4" alt="loading img" width="800" height="500"></div>
                     <div>
                         <mat-list>
-                            <h4>Detail Checkbox:</h4>
+                            <h4>Detail Checkbox</h4>
                             <mat-divider></mat-divider>
                             <mat-list-item *ngFor="let ck4 of arraycheckbox4">{{ck4}}</mat-list-item>
                         </mat-list>  
@@ -134,7 +161,7 @@ Date    : 05/11/2019
                     <div class="imgsty"><img [src]="image5" alt="loading img"  width="800" height="500"></div>
                     <div>
                         <mat-list>
-                            <h4>Detail Checkbox:</h4>
+                            <h4>Detail Checkbox</h4>
                             <mat-divider></mat-divider>
                             <mat-list-item *ngFor="let ck5 of arraycheckbox5">{{ck5}}</mat-list-item>
                         </mat-list>  
@@ -154,7 +181,7 @@ Date    : 05/11/2019
                     <div class="imgsty"><img [src]="image6" alt="loading img"  width="800" height="500"></div>
                     <div>
                         <mat-list>
-                            <h4>Detail Checkbox:</h4>
+                            <h4>Detail Checkbox</h4>
                             <mat-divider></mat-divider>
                             <mat-list-item *ngFor="let ck6 of arraycheckbox6">{{ck6}}</mat-list-item>
                         </mat-list>  
@@ -174,7 +201,7 @@ Date    : 05/11/2019
                     <div class="imgsty"><img [src]="image7" alt="loading img"  width="800" height="500"></div>
                     <div>
                         <mat-list>
-                            <h4>Detail Checkbox:</h4>
+                            <h4>Detail Checkbox</h4>
                             <mat-divider></mat-divider>
                             <mat-list-item *ngFor="let ck7 of arraycheckbox7">{{ck7}}</mat-list-item>
                         </mat-list>  
@@ -194,7 +221,7 @@ Date    : 05/11/2019
                     <div class="imgsty"><img [src]="image8" alt="loading img"  width="800" height="500"></div>
                     <div>
                         <mat-list>
-                            <h4>Detail Checkbox:</h4>
+                            <h4>Detail Checkbox</h4>
                             <mat-divider></mat-divider>
                             <mat-list-item *ngFor="let ck8 of arraycheckbox8">{{ck8}}</mat-list-item>
                         </mat-list>  
@@ -214,7 +241,7 @@ Date    : 05/11/2019
                     <div class="imgsty"><img [src]="image9" alt="loading img"  width="800" height="500"></div>
                     <div>
                         <mat-list>
-                            <h4>Detail Checkbox:</h4>
+                            <h4>Detail Checkbox</h4>
                             <mat-divider></mat-divider>
                             <mat-list-item *ngFor="let ck9 of arraycheckbox9">{{ck9}}</mat-list-item>
                         </mat-list>  
@@ -234,7 +261,7 @@ Date    : 05/11/2019
                     <div class="imgsty"><img [src]="image10" alt="loading img"  width="800" height="500"></div>
                     <div>
                         <mat-list>
-                            <h4>Detail Checkbox:</h4>
+                            <h4>Detail Checkbox</h4>
                             <mat-divider></mat-divider>
                             <mat-list-item *ngFor="let ck10 of arraycheckbox10">{{ck10}}</mat-list-item>
                         </mat-list>  
@@ -256,7 +283,7 @@ Date    : 05/11/2019
       <div class="col-md-6 mt-md-0 mt-3">
         <!-- Content -->
         <h3 class="text-uppercase">MORE INFORMATION</h3>
-        <p>Information about PT Komatsu Indonesia Foundry Plant you can visit link <a href="http://www.komi.co.id/facilities/cacing-plants/foundry?lang=en">here</a></p>
+        <p class="text-content">Information about PT Komatsu Indonesia Foundry Plant you can visit link <a style="color: aqua;" href="http://www.komi.co.id/facilities/cacing-plants/foundry?lang=en"><em>here</em></a></p>
       </div>
     </div>
     <!-- Grid row -->
@@ -269,4 +296,5 @@ Date    : 05/11/2019
   </div>
   <!-- Copyright -->
 </footer>
+
 

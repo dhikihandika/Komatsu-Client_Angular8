@@ -21,7 +21,7 @@ mat-expansion-panel-header{
 /* Footer Style */
 footer {
     background-color: rgb(30, 103, 187);
-    color: white;
+    color:white;
     font-size: 18px;
     padding: 0;
     margin-top: 20px;
@@ -33,3 +33,42 @@ footer {
 .row{
     margin: 0px;
 }
+
+
+/* Responsive design on ipad */
+@media only screen and (min-width:375px) and (max-width:1024px) {
+    .text-uppercase, .text-content{
+        text-align: left;
+        font-size: 20px;
+    }
+    .footer-copyright{
+        font-size: 15px;
+    }
+  }
+
+/* Responsive design on mobile phone */
+@media only screen and (max-width:375px){
+    mat-panel-title h3{
+        font-size: 12px;
+        margin: 7px;
+    }
+    mat-panel-description{
+        font-size: 12px;
+        margin: 5px;
+    }
+    .chart-title{
+        font-size: 17px; 
+        text-align: center;
+    }
+    .text-uppercase, .text-content{
+        text-align: left;
+        font-size: 15px;
+        padding:5px;
+        margin: 2px;
+    }
+    .footer-copyright{
+        font-size: 10px;
+        padding: 2px;
+        margin: 5px;
+    }
+  }

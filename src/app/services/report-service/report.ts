@@ -4,8 +4,8 @@ Date    : 22/10/2019
 */
 
 // Define an interface with the required properties
-// this is structure your HttpClient request to declare the type of the response object
-export class Ireports {
+// This is structure your HttpClient request to declare the type of the response object
+export class Ireports {             // Exports class Ireports
     id: number;
     nama_op: string;
     model_type: string;
